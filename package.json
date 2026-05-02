@@ -1,0 +1,16 @@
+{
+  "name": "chatbot-project",
+  "version": "1.0.0",
+  "description": "Production-ready AI Chatbot Widget",
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build",
+    "setup": "cp server/.env.example server/.env && cp client/.env.example client/.env && echo '✅ .env files created. Fill in your API keys!'"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
